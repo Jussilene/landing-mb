@@ -67,15 +67,27 @@ footer{text-align:center;padding:55px 20px 35px;border-top:1px solid var(--line)
 
 /* Logo horizontal */
 .header-logo,.topbar.scrolled .header-logo{
-  width:280px;
-  top:4px;
+  width:270px;
+  top:5px;
   left:24px;
 }
+.topbar,.topbar.scrolled{
+  height:100px;
+  min-height:100px;
+}
 .footer-logo{width:min(430px,88vw)}
+@media(max-width:1000px){
+  .topbar nav{top:100px}
+}
 @media(max-width:768px){
+  .topbar,.topbar.scrolled{
+    height:68px;
+    min-height:68px;
+  }
   .header-logo,.topbar.scrolled .header-logo{
     width:190px;
     top:3px;
     left:10px;
   }
+  .topbar nav{top:68px}
 }
