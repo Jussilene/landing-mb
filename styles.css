@@ -820,6 +820,10 @@ main > section.about p strong{
   font-weight:600;
 }
 
+main > .trust-strip.reveal + section.section.about{
+  margin-top:32px;
+}
+
 .glass-card,
 .steps article{
   transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease;
@@ -970,6 +974,10 @@ main > section.about .about-photo img{
   .floating-whatsapp{
     right:12px;
     bottom:12px;
+  }
+
+  main > .trust-strip.reveal + section.section.about{
+    margin-top:24px;
   }
 }
 
