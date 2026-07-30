@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260730-3">
+  <link rel="stylesheet" href="styles.css?v=20260730-4">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -75,7 +75,7 @@
     <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu"><span></span><span></span><span></span></button>
     <nav id="main-nav" aria-label="Navegação principal">
       <a href="#sobre">Sobre</a><a href="#consultas">Orientações</a>
-      <a href="#como-funciona">Como funciona</a>
+      <a href="#como-funciona">Como funciona</a><a href="#depoimentos">Depoimentos</a>
       <a href="#duvidas">Dúvidas</a><a href="#localizacao">Localização</a><a href="#contato">Contato</a>
       <a class="btn btn-small" data-whatsapp href="#">Agendar atendimento</a>
     </nav>
@@ -151,14 +151,78 @@
       <p class="section-intro reveal">Conheça um pouco mais sobre o trabalho do Marcello e entenda como o Tarô Cigano, a espiritualidade e a fé podem ajudar você a observar seus caminhos com mais clareza e esperança.</p>
     </section>
 
-    <!-- Estrutura preservada para reativação quando houver depoimentos reais autorizados. -->
-    <template id="depoimentos-template">
-      <section class="section centered" id="depoimentos">
-        <p class="eyebrow reveal">Experiências compartilhadas</p>
-        <h2 class="reveal">Palavras de quem <em>já recebeu uma orientação</em></h2>
-        <div class="testimonials reveal"></div>
-      </section>
-    </template>
+    <section class="section centered testimonials-section" id="depoimentos">
+      <p class="eyebrow reveal">Experiências compartilhadas</p>
+      <h2 class="reveal">Ouça quem <em>já viveu essa experiência</em></h2>
+      <p class="section-intro reveal">Relatos espontâneos de clientes que autorizaram o compartilhamento de suas experiências com o atendimento de Marcello Bredley.</p>
+
+      <figure class="testimonial-message reveal">
+        <button class="testimonial-message-image" type="button" data-lightbox-image="assets/depoimentos/mensagem-whatsapp.jpeg" aria-label="Ampliar mensagem recebida pelo WhatsApp">
+          <img src="assets/depoimentos/mensagem-whatsapp.jpeg" alt="Mensagem de agradecimento recebida pelo WhatsApp" width="1080" height="641" loading="lazy">
+          <span aria-hidden="true">⌕</span>
+        </button>
+        <figcaption>
+          <span class="testimonial-kicker">Mensagem recebida</span>
+          <blockquote>“Que honra ouvir essa voz com essas palavras lindas. Obrigado por tudo. Deus abençoe grandemente sua vida e sua família.”</blockquote>
+          <p>Um carinho compartilhado por WhatsApp após uma orientação.</p>
+        </figcaption>
+      </figure>
+
+      <div class="testimonials audio-testimonials reveal">
+        <article class="testimonial-audio">
+          <div class="testimonial-person"><span class="testimonial-avatar" aria-hidden="true">A</span><div><strong>Arthur Leandro</strong><small>São Paulo — SP</small></div></div>
+          <p>Relato sobre relacionamento e união.</p>
+          <audio controls preload="none" aria-label="Depoimento em áudio de Arthur Leandro"><source src="assets/depoimentos/arthur-leandro.mp3" type="audio/mpeg">Seu navegador não oferece suporte a áudio.</audio>
+        </article>
+        <article class="testimonial-audio">
+          <div class="testimonial-person"><span class="testimonial-avatar" aria-hidden="true">C</span><div><strong>Carina</strong><small>Arroio dos Ratos — RS</small></div></div>
+          <p>Carina compartilha sua experiência pessoal.</p>
+          <audio controls preload="none" aria-label="Depoimento em áudio de Carina"><source src="assets/depoimentos/carina.mp3" type="audio/mpeg">Seu navegador não oferece suporte a áudio.</audio>
+        </article>
+        <article class="testimonial-audio">
+          <div class="testimonial-person"><span class="testimonial-avatar" aria-hidden="true">E</span><div><strong>Emerson</strong><small>Colombo — PR</small></div></div>
+          <p>Impressões sobre a abertura das cartas.</p>
+          <audio controls preload="none" aria-label="Depoimento em áudio de Emerson"><source src="assets/depoimentos/emerson.mp3" type="audio/mpeg">Seu navegador não oferece suporte a áudio.</audio>
+        </article>
+        <article class="testimonial-audio">
+          <div class="testimonial-person"><span class="testimonial-avatar" aria-hidden="true">G</span><div><strong>Gerson</strong><small>Tatuquara, Curitiba — PR</small></div></div>
+          <p>Gerson conta seu testemunho pessoal.</p>
+          <audio controls preload="none" aria-label="Depoimento em áudio de Gerson"><source src="assets/depoimentos/gerson.mp3" type="audio/mpeg">Seu navegador não oferece suporte a áudio.</audio>
+        </article>
+        <article class="testimonial-audio testimonial-extra" hidden>
+          <div class="testimonial-person"><span class="testimonial-avatar" aria-hidden="true">I</span><div><strong>Iara</strong><small>Curitiba — PR</small></div></div>
+          <p>Agradecimento pelas palavras e pela orientação.</p>
+          <audio controls preload="none" aria-label="Depoimento em áudio de Iara"><source src="assets/depoimentos/iara.mp3" type="audio/mpeg">Seu navegador não oferece suporte a áudio.</audio>
+        </article>
+        <article class="testimonial-audio testimonial-extra" hidden>
+          <div class="testimonial-person"><span class="testimonial-avatar" aria-hidden="true">L</span><div><strong>Liane</strong><small>Rio Grande do Sul</small></div></div>
+          <p>Relato sobre união e harmonia familiar.</p>
+          <audio controls preload="none" aria-label="Depoimento em áudio de Liane"><source src="assets/depoimentos/liane.mp3" type="audio/mpeg">Seu navegador não oferece suporte a áudio.</audio>
+        </article>
+        <article class="testimonial-audio testimonial-extra" hidden>
+          <div class="testimonial-person"><span class="testimonial-avatar" aria-hidden="true">M</span><div><strong>Marta</strong><small>Fazenda Rio Grande — PR</small></div></div>
+          <p>Uma experiência de mudança na vida profissional.</p>
+          <audio controls preload="none" aria-label="Depoimento em áudio de Marta"><source src="assets/depoimentos/marta.mp3" type="audio/mpeg">Seu navegador não oferece suporte a áudio.</audio>
+        </article>
+        <article class="testimonial-audio testimonial-extra" hidden>
+          <div class="testimonial-person"><span class="testimonial-avatar" aria-hidden="true">M</span><div><strong>Marzilda</strong><small>São José dos Pinhais — PR</small></div></div>
+          <p>Relato sobre uma conquista pessoal.</p>
+          <audio controls preload="none" aria-label="Depoimento em áudio de Marzilda"><source src="assets/depoimentos/marzilda.mp3" type="audio/mpeg">Seu navegador não oferece suporte a áudio.</audio>
+        </article>
+        <article class="testimonial-audio testimonial-extra" hidden>
+          <div class="testimonial-person"><span class="testimonial-avatar" aria-hidden="true">W</span><div><strong>Walquiria</strong><small>Fazendinha, Curitiba — PR</small></div></div>
+          <p>Relato sobre mudanças e união familiar.</p>
+          <audio controls preload="none" aria-label="Depoimento em áudio de Walquiria"><source src="assets/depoimentos/walquiria.mp3" type="audio/mpeg">Seu navegador não oferece suporte a áudio.</audio>
+        </article>
+      </div>
+      <button class="btn btn-ghost testimonials-toggle reveal" type="button" aria-expanded="false">Ouvir mais 5 depoimentos <span aria-hidden="true">↓</span></button>
+      <p class="testimonials-note reveal">Os relatos representam experiências pessoais e individuais. Resultados podem variar de pessoa para pessoa.</p>
+    </section>
+
+    <dialog class="testimonial-lightbox" aria-label="Mensagem de depoimento ampliada">
+      <button type="button" aria-label="Fechar imagem">×</button>
+      <img src="assets/depoimentos/mensagem-whatsapp.jpeg" alt="Mensagem de agradecimento recebida pelo WhatsApp">
+    </dialog>
 
     <section class="section cta reveal">
       <div class="mini-card card-left">☾<span>XXI</span></div><div class="mini-card card-right">✦<span>XVII</span></div>

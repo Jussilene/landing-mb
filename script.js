@@ -124,3 +124,32 @@ document.querySelectorAll(".accordion details").forEach((detail) => {
 });
 
 document.querySelector("#year").textContent = new Date().getFullYear();
+
+const testimonialToggle = document.querySelector(".testimonials-toggle");
+const testimonialExtras = [...document.querySelectorAll(".testimonial-extra")];
+
+testimonialToggle?.addEventListener("click", () => {
+  const willExpand = testimonialToggle.getAttribute("aria-expanded") !== "true";
+  testimonialExtras.forEach((card) => { card.hidden = !willExpand; });
+  testimonialToggle.setAttribute("aria-expanded", String(willExpand));
+  testimonialToggle.firstChild.textContent = willExpand ? "Mostrar menos " : "Ouvir mais 5 depoimentos ";
+});
+
+const testimonialAudios = [...document.querySelectorAll(".testimonial-audio audio")];
+testimonialAudios.forEach((audio) => {
+  audio.addEventListener("play", () => {
+    testimonialAudios.forEach((other) => {
+      if (other !== audio) other.pause();
+    });
+  });
+});
+
+const testimonialLightbox = document.querySelector(".testimonial-lightbox");
+const testimonialImageButton = document.querySelector("[data-lightbox-image]");
+const closeTestimonialLightbox = testimonialLightbox?.querySelector("button");
+
+testimonialImageButton?.addEventListener("click", () => testimonialLightbox?.showModal());
+closeTestimonialLightbox?.addEventListener("click", () => testimonialLightbox.close());
+testimonialLightbox?.addEventListener("click", (event) => {
+  if (event.target === testimonialLightbox) testimonialLightbox.close();
+});
