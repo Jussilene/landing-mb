@@ -705,16 +705,10 @@ main > section.about p strong{
 
 .btn-primary,
 .btn-small,
-.btn-whatsapp:not([type="submit"]){
+.btn-whatsapp{
   color:#fff;
   background:linear-gradient(135deg,#965cff 0%,#526ee9 55%,#2abbd5 100%);
   box-shadow:0 8px 24px rgba(82,110,233,.18);
-}
-
-.btn-whatsapp[type="submit"]{
-  background:var(--green);
-  color:#041309;
-  box-shadow:0 8px 24px rgba(37,211,102,.16);
 }
 
 .topbar,
